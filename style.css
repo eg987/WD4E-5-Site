@@ -54,6 +54,9 @@
   font-weight: 900;
   font-style: normal;
 }
+/* Colors
+#000000 black, #121212 v. dark gray, #353535 dark gray, #A9A6AD light gray, #F9f9FF off-white, #5e3ABB main purple, #fafafa pure white */
+
 
 /* Mobile Nav */
 /* HAMBURGER MENU */
@@ -82,7 +85,7 @@
     width: 100%;
     height: 2px;
     background-color: black;
-    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   
   .menu-links {
@@ -93,7 +96,7 @@
     width: fit-content;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   
   .menu-links a {
@@ -103,7 +106,7 @@
     font-size: 1.5rem;
     color: #121212;
     text-decoration: none;
-    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   
   .menu-links li {
@@ -259,8 +262,8 @@ border: #5e3ABB .1rem solid;}
 .icon {
   cursor: pointer;
   height: 2rem;
-  width: auto;
-  margin: 0;
+  /* width: auto;
+  margin: 0; */
 }
 
 /* SECTIONS */
@@ -358,7 +361,39 @@ section, .section-container {
 
   .about-containers{
   display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
   }
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: #F9f9FF;
+  border-radius: 2rem;
+  border: #A9A6AD .1rem solid;
+  text-align: center;
+  }
+
+.text-container{
+  text-align: justify;
+}
+
+.arrow {
+    display: none;
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;}
+
+.icon{
+  cursor: pointer;
+  height: 2rem;}
+
+
+
+
+
 
 
 
@@ -384,6 +419,22 @@ section, .section-container {
     display: block;
     /* about pic to top */
   }
+/* set text container depending on final look; reference earlier level to avoid redundancy */
+  /* .text-container{
+  text-align: unset; */
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
@@ -406,7 +457,7 @@ section, .section-container {
 
   section {
     height: 96vh;
-    margin: 0, 10rem;
+    margin: 0 10rem;
   }
 
   #profile{
@@ -439,8 +490,13 @@ section, .section-container {
     /* about pic to side */
   }
  
+  .about-containers{
+    margin-top: 2rem;
+  }
+/* set text container depending on final look, reference earlier level to avoid redundancy*/
+  /* .text-container{
+  text-align: unset; */
 
-
-
-  /* also resize font for name, hello, etc.--it's okay for 1100, but bad for 1400, i think just style texts */
+  .arrow {
+    display: inline-block;}
 }
