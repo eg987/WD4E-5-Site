@@ -1,0 +1,6 @@
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+/* doing mobile first, so mobile view is inherent in style.css, as of now tablet and desktop views are also at end of style.css */

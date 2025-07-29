@@ -274,6 +274,8 @@ section {
   min-height: fit-content;
   margin: 0 5%;
 }
+section, .section-container {
+  height: fit-content;}
 
 .section-container {
   display: flex;
@@ -322,6 +324,11 @@ section {
   margin-bottom: 6rem;  
 }
 
+#profile .section-container {
+  display: block
+  /* puts about me pic above details in mobile view */
+}
+
 #socials-container {
   display: flex;
   justify-content: center;
@@ -333,6 +340,25 @@ section {
 #about {
   position: relative;
 }
+
+#about .section-container{
+  display: block;
+}
+
+.about-pic{
+  border-radius: 2rem;
+  /* no effect with current pic bc pic is circluar  */
+}
+
+ .about-details-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  }
+
+  .about-containers{
+  display: flex;
+  }
 
 
 
@@ -348,10 +374,16 @@ section {
     height: 275px;}
   
   .section__text__p2 {
-    font-size: 1.75rem;
-    
+    font-size: 1.75rem;}
 
-}
+    /* about me */
+  .title{
+      font-size: 3rem;
+    }
+  #about .section-container{
+    display: block;
+    /* about pic to top */
+  }
 }
 
 
@@ -384,13 +416,31 @@ section {
     height: 80vh;
   }
 
-  #profile, .section-container {
+  #profile .section-container {
         display: flex;}
+        /* is this repetitive?? */
         
   img{
    width: auto; 
+   /* might not need width */
    margin: 0;
    padding: 0;
   }
+
+  /* about me */
+
+  .section-container {
+    gap: 4rem;
+    height: 80%;
+  }
+
+  #about .section-container{
+    display: flex;
+    /* about pic to side */
+  }
+ 
+
+
+
   /* also resize font for name, hello, etc.--it's okay for 1100, but bad for 1400, i think just style texts */
 }
