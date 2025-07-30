@@ -58,6 +58,7 @@
 #000000 black, #121212 v. dark gray, #353535 dark gray, #A9A6AD light gray, #F9f9FF off-white, #5e3ABB main purple, #fafafa pure white */
 
 
+
 /* Mobile Nav */
 /* HAMBURGER MENU */
 #desktop-nav {
@@ -276,12 +277,12 @@ section {
   box-sizing: border-box;
   min-height: fit-content;
   margin: 0 5%;
+  height: fit-content;
 }
-section, .section-container {
-  height: fit-content;}
 
 .section-container {
   display: flex;
+  height: fit-content;
 }
 
 .section__pic-container {
@@ -324,7 +325,7 @@ section, .section-container {
   justify-content: center;
   gap: 5rem;
   height: 83vh;
-  margin-bottom: 6rem;  
+  margin-bottom: 3rem;  
 }
 
 #profile .section-container {
@@ -386,21 +387,34 @@ section, .section-container {
     right: -5rem;
     bottom: 2.5rem;}
 
-.icon{
-  cursor: pointer;
-  height: 2rem;}
-
-
-
-
-
-
-
 
 /* Experience */
+#experience {
+  margin-top: 2rem;}
 
 
+.experience-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
 
+/* Projects */
+#projects {
+  position: relative;
+}
+
+#projects p.section__text__p1
+{
+  color:#353535
+}
+/* tried to center everything in broswer window, not working, go back and delete wrapper div 
+#wrapper{
+  margin: 0 auto;
+  padding: 0;
+
+} */
 /* Tablet Layout-same as max 1200 */
 @media screen and (min-width: 600px) {
 
@@ -411,14 +425,23 @@ section, .section-container {
   .section__text__p2 {
     font-size: 1.75rem;}
 
-    /* about me */
+  /* profile */
+    #profile{
+      margin-bottom: 6rem;
+    }
+  /* about me */
   .title{
       font-size: 3rem;
     }
   #about .section-container{
-    display: block;
+    display: block;}
     /* about pic to top */
-  }
+  /* experience */
+  
+    
+    
+
+    
 /* set text container depending on final look; reference earlier level to avoid redundancy */
   /* .text-container{
   text-align: unset; */
@@ -497,6 +520,12 @@ section, .section-container {
   /* .text-container{
   text-align: unset; */
 
+  /* fix positioning of the one linked to projects, in experience section 
   .arrow {
-    display: inline-block;}
+    display: inline-block;} */
+ 
+  /* EXPERIENCE */
+    #experience, .experience-details-container{
+    margin-top: 0
+  }
 }
