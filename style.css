@@ -479,7 +479,8 @@ section {
   }
 
   section {
-    height: 96vh;
+    /* height: 96vh; */
+    /* this was causing overlap issues with experience and profile/about me sections, can set min height as needed. */
     margin: 0 10rem;
   }
 
@@ -527,5 +528,10 @@ section {
   /* EXPERIENCE */
     #experience, .experience-details-container{
     margin-top: 0
+  }
+
+  #experience{
+    padding-top: 8vh;
+    /* maybe revert to normal setting (erase this) once final text for experience section figured out */
   }
 }
