@@ -206,6 +206,12 @@ a {
   border: #5e3ABB .1rem solid;
 }
 
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
 /* Icons */
 .icon {
   cursor: pointer;
@@ -411,8 +417,8 @@ cursor: default;
     font-size: 1.75rem;}
 
   /* profile */
-    #profile{
-      margin-bottom: 1rem;
+    #profile {
+      margin-bottom: 6rem;
     }
   /* about me */
   .title{
