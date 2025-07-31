@@ -158,7 +158,7 @@ p {
 
 /* Transitions--figure out how to deactivate for movement querey */
 
-a, .btn {
+a {
   color: #121212;
   transition: all 0.3s ease;
 }
@@ -172,31 +172,33 @@ a, .btn {
   padding: 1rem;
   width: 8rem;
   border-radius: 2rem;
-  margin: .5rem;}
+  margin: .5rem;
+}
 
-.btn-1
-{border: #000000 0.1rem solid;
-color:#F9f9FF;
-background-color: #121212;}
-
-.btn-1:hover{background-color: #F9f9FF;
-  color:#000000;
-cursor: pointer;}
-
-.btn-2
-{border: #000000 0.1rem solid;
-color:#F9f9FF;
-background-color: #353535;}
-
-.btn-2:hover
-{background-color: #121212;
+.btn-1 {
+  border: #000000 0.1rem solid;
   color:#F9f9FF;
-cursor: pointer;}
+  background-color: #121212;}
+
+.btn-1:hover{
+  background-color: #F9f9FF;
+  color:#000000;
+  cursor: pointer;}
+
+.btn-2{
+  border: #000000 0.1rem solid;
+  color:#F9f9FF;
+  background-color: #353535;}
+
+.btn-2:hover{
+  background-color: #121212;
+  color:#F9f9FF;
+  cursor: pointer;}
 
 .btn-3{background-color: #5e3ABB;
   color:#F9f9FF;
-cursor: pointer;
-border: #5e3ABB .1rem solid;}
+  cursor: pointer;
+  border: #5e3ABB .1rem solid;}
 
 .btn-3:hover {
   background-color: #F9f9FF;
@@ -410,7 +412,7 @@ cursor: default;
 
   /* profile */
     #profile{
-      margin-bottom: 6rem;
+      margin-bottom: 1rem;
     }
   /* about me */
   .title{
@@ -429,17 +431,6 @@ cursor: default;
 /* set text container depending on final look; reference earlier level to avoid redundancy */
   /* .text-container{
   text-align: unset; */
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
@@ -474,6 +465,7 @@ cursor: default;
     justify-content: center;
     gap: 5rem;
     height: 80vh;
+    margin-bottom: 6rem;
   }
 
   #profile .section-container {
