@@ -335,7 +335,8 @@ section {
 
 /* Experience */
 #experience {
-  margin-top: 2rem;}
+  margin-top: 2rem;
+  position: relative;}
 
 
 .experience-details-container {
@@ -361,7 +362,7 @@ section {
   justify-content: space-around;}
 
 article{
-  font-size: 1rem;
+  /* font-size: 1rem; not specified in orig except for minimal size*/
   display: flex;
   width: 10rem;
   justify-content: space-around;
@@ -465,6 +466,7 @@ cursor: default;
     /* height: 96vh; */
     /* this was causing overlap issues with experience and profile/about me sections, can set min height as needed. */
     margin: 0 10rem;
+    padding-top: 4vh;
   }
 
   #profile{
@@ -504,17 +506,19 @@ cursor: default;
   /* .text-container{
   text-align: unset; */
 
-  /* fix positioning of the one linked to projects, in experience section 
+  /* fix positioning of the one linked to projects, in experience section */
   .arrow {
     display: inline-block;} */
  
   /* EXPERIENCE */
-    #experience, .experience-details-container{
+  .experience-details-container{
     margin-top: 0
   }
 
   #experience{
     padding-top: 8vh;
-    /* maybe revert to normal setting (erase this) once final text for experience section figured out */
+    /* maybe revert to normal setting (by deleting this line) of 4vh set by section once final text for experience section figured out */
+    height: 96vh;
+    margin-top: 0
   }
 }
