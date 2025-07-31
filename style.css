@@ -1,59 +1,4 @@
-/* Fonts--remove unused at end */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.poppins-thin {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.poppins-extralight {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.poppins-light {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.poppins-regular {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.poppins-medium {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.poppins-semibold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.poppins-bold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.poppins-extrabold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.poppins-black {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
 /* Colors
 #000000 black, #121212 v. dark gray, #353535 dark gray, #A9A6AD light gray, #F9f9FF off-white, #5e3ABB main purple, #fafafa pure white */
 
@@ -354,13 +299,13 @@ section {
   /* no effect with current pic bc pic is circluar  */
 }
 
- .about-details-container{
+.about-details-container{
   display: flex;
   justify-content: center;
   flex-direction: column;
   }
 
-  .about-containers{
+.about-containers{
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -394,11 +339,35 @@ section {
 
 
 .experience-details-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem;
   }
+
+.experience-sub-title {
+  font-size: 1.25rem;
+  color:#121212;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  }
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;}
+
+.article{
+  font-size: 1rem;
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
 
 /* Projects */
 #projects {
@@ -437,7 +406,8 @@ section {
     display: block;}
     /* about pic to top */
   /* experience */
-  
+  .experience-sub-title {
+  font-size: 1.75rem;}
     
     
 
