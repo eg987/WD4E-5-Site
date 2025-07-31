@@ -223,11 +223,12 @@ section {
   min-height: fit-content;
   margin: 0 5%;
   height: fit-content;
+  /* makesure height gets over-rided in profile section mobile view */
 }
 
 .section-container {
   display: flex;
-  height: fit-content;
+  /* height: 80%; see original about section sect-cont*/
 }
 
 .section__pic-container {
@@ -267,8 +268,6 @@ section {
 
 #profile {
   display: block;
-  justify-content: center;
-  gap: 5rem;
   height: 83vh;
   margin-bottom: 3rem;  
 }
@@ -292,6 +291,7 @@ section {
 
 #about .section-container{
   display: block;
+  height: fit-content;
 }
 
 .about-pic{
@@ -508,17 +508,16 @@ cursor: default;
 
   /* fix positioning of the one linked to projects, in experience section */
   .arrow {
-    display: inline-block;} */
+    display: inline-block;}
  
   /* EXPERIENCE */
   .experience-details-container{
-    margin-top: 0
-  }
-
+    margin-top: 0;}
+    
   #experience{
     padding-top: 8vh;
     /* maybe revert to normal setting (by deleting this line) of 4vh set by section once final text for experience section figured out */
     height: 96vh;
-    margin-top: 0
+    margin-top: 0;
   }
 }
