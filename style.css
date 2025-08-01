@@ -398,10 +398,13 @@ cursor: default;
   width: 90%;
   height: 90%;
 }
-/* tried to center everything in broswer window, not working, go back and delete wrapper div 
-#wrapper{
-  margin: 0 auto;
-  padding: 0;
+
+.project-title{
+  margin: 1rem;
+  color: black;
+  /* color: #121212 */
+}
+/* look up this https://www.w3schools.com/css/css_rwd_images.asp resize max image width per each view. 
 
 } */
 /* Tablet Layout-same as max 1200 */
