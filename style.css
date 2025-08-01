@@ -81,37 +81,30 @@
     opacity: 1;
   }
 
-nav {
-  justify-content: space-around;
-  align-items: center;
-  height: 17vh;
-  display: inline-block;
-  }
-
+  /* name logo */
 .logo {
-    font-size: 2rem;
     font-weight: 600;
     white-space: nowrap;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
+    /* logo size for navs set in #desktop-nav and #hamburger-nav ids; don't set here b/c lower in */
   }
-
+#hamburger-nav .logo{
+  font-size: 1.5rem;
+}
   
 .logo:hover {
     cursor: default;
   }
-/* Desktop Nav */
-  /* Desktop Nav */
-.desk-nav-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  font-size: 1.5rem;
-}
+/* Desktop Nav see mediascreen min 1200 */
+
 nav {
     display: flex;
     list-style: none;
     gap: 2rem;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
   }
 .nav-links {
    display: flex;
@@ -458,7 +451,20 @@ cursor: default;
   #desktop-nav {
     display: flex;
   }
+   /* Desktop Nav */
 
+  #desktop-nav .logo{
+    font-size: 2rem;
+  }
+
+.desk-nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+    
+  
   section {
     /* height: 96vh; */
     /* this was causing overlap issues with experience and profile/about me sections, can set min height as needed. */
@@ -470,7 +476,7 @@ cursor: default;
     display: flex;
     justify-content: center;
     gap: 5rem;
-    height: 80vh;
+    height: 83vh;
     margin-bottom: 6rem;
   }
 
