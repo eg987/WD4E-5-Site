@@ -389,9 +389,14 @@ cursor: default;
   position: relative;
 }
 
-#projects p.section__text__p1
-{
+#projects p.section__text__p1{
   color:#353535
+}
+
+.project-img{
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
 }
 /* tried to center everything in broswer window, not working, go back and delete wrapper div 
 #wrapper{
