@@ -99,13 +99,19 @@
 
 nav {
     display: flex;
-    list-style: none;
-    gap: 2rem;
+    /* list-style: none; doesn't apply to footer*/
+    /* gap: 2rem; doesn't apply to footer*/
     /* font-size: 1.5rem; */
     justify-content: space-around;
     align-items: center;
     height: 17vh;
   }
+nav#hamber-nav, nav#desktop-nav{
+    
+    list-style: none;
+    gap: 2rem;
+}
+
 .nav-links {
    display: flex;
     list-style: none;
@@ -433,6 +439,15 @@ cursor: default;
   gap: 0.5rem;
 }
 
+.contact-info-container p{
+  font-size: 1rem;
+}
+
+/* FOOTER */
+footer{
+  height:40vh;
+  margin: 0 1rem;
+}
 /* Tablet Layout-same as max 1200 */
 @media screen and (min-width: 600px) {
 
@@ -443,22 +458,29 @@ cursor: default;
   .section__text__p2 {
     font-size: 1.75rem;}
 
-  /* profile */
+  /* PROFILE */
     #profile {
       margin-bottom: 6rem;
     }
-  /* about me */
+  /*ABOUT */
   .title{
       font-size: 3rem;
     }
   #about .section-container{
     display: block;}
     /* about pic to top */
-  /* experience */
-  .experience-sub-title {
-    font-size: 1.75rem;}
 
-  #content{
+  /* set text container depending on final look; reference earlier level to avoid redundancy */
+  /* .text-container{
+  text-align: unset; */
+
+  /* EXPERIENCE*/
+    .experience-sub-title {
+      font-size: 1.75rem;}
+
+  /* CONTACT */
+
+  #contact{
     height: 70vh;
     }
 
@@ -470,21 +492,22 @@ cursor: default;
   .contact-info-container{
     margin: 1rem;
   }
+
+  .contact-icon {
+  cursor: default;}
   }
     
-    
-
-    
-  /* set text container depending on final look; reference earlier level to avoid redundancy */
-  /* .text-container{
-  text-align: unset; */
-
-
-}
+ .contact-info-container p{
+  font-size: larger;}
+  
+  /* FOOTER */
+  footer{
+    height:26vh;
+  }
 
 
   
-/* Desktop Layout -same as max 1400 and default*/
+/*------------------- Desktop Layout -same as max 1400 and default-----------------*/
   
 @media  screen and (min-width: 1200px){ 
   .section__pic-container {
