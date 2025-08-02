@@ -448,6 +448,17 @@ footer{
   height:40vh;
   margin: 0 1rem;
 }
+
+footer nav {
+  height: fit-content;
+  margin-bottom: 2rem;
+  }
+
+footer p{
+  text-align: center;
+}
+
+
 /* Tablet Layout-same as max 1200 */
 @media screen and (min-width: 600px) {
 
@@ -495,7 +506,6 @@ footer{
 
   .contact-icon {
   cursor: default;}
-  }
     
  .contact-info-container p{
   font-size: larger;}
@@ -504,7 +514,18 @@ footer{
   footer{
     height:26vh;
   }
+ 
+  footer nav {
+  height: 17vh;
+  margin-bottom: 0;
+  }
 
+  footer ul.nav-links{
+    gap: 2rem;
+    flex-direction: row;
+    /* text-align: left; probably don't need- originally put bc is browser default to "undo" setting set in nav-links above seems to have no effect*/
+  }
+}
 
   
 /*------------------- Desktop Layout -same as max 1400 and default-----------------*/
