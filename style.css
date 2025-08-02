@@ -406,7 +406,33 @@ cursor: default;
 }
 /* look up this https://www.w3schools.com/css/css_rwd_images.asp resize max image width per each view. 
 
-} */
+/*CONTACT SECTION  */
+#contact{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 40vh;
+
+}
+
+.contact-info-upper-container{
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: #A9A6AD .1rem solid;
+  background: #F9f9FF;
+  margin: 2rem auto;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
 /* Tablet Layout-same as max 1200 */
 @media screen and (min-width: 600px) {
 
@@ -430,12 +456,26 @@ cursor: default;
     /* about pic to top */
   /* experience */
   .experience-sub-title {
-  font-size: 1.75rem;}
+    font-size: 1.75rem;}
+
+  #content{
+    height: 70vh;
+    }
+
+  .contact-info-upper-container{
+    flex-wrap:nowrap;
+    gap:0;
+  }
+
+  .contact-info-container{
+    margin: 1rem;
+  }
+  }
     
     
 
     
-/* set text container depending on final look; reference earlier level to avoid redundancy */
+  /* set text container depending on final look; reference earlier level to avoid redundancy */
   /* .text-container{
   text-align: unset; */
 
@@ -465,12 +505,12 @@ cursor: default;
     font-size: 2rem;
   }
 
-.desk-nav-links {
+  .desk-nav-links {
   display: flex;
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
-}
+  }
     
   
   section {
@@ -514,7 +554,7 @@ cursor: default;
   .about-containers{
     margin-top: 2rem;
   }
-/* set text container depending on final look, reference earlier level to avoid redundancy*/
+  /* set text container depending on final look, reference earlier level to avoid redundancy*/
   /* .text-container{
   text-align: unset; */
 
