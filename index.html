@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- not sure what the ie edge thing does or how it effects things -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
@@ -16,12 +14,12 @@
   <nav id="hamburger-nav">
     <div class="logo">First Lastname</div>
     <div class="hamburger-menu" >
-      <div class="hamburger-icon" onclick="toggleMenu()">
+      <button class="hamburger-icon" onclick="toggleMenu()" aria-label="Toggle navigation menu">
         <!-- these are lines of hamburger menu -->
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
       <ul class="menu-links">
         <li><a href="#about" onclick="toggleMenu()">About</a></li>
         <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
@@ -223,11 +221,11 @@
           <p><a href="mailto:examplemail@gmail.com">Example@email.com</a></p>
         </div>
       <div class="contact-info-container">
-          <img
+          <a href="https://linkedin.com/" class="icon-link" aria-label="Visit my LinkedIn"><img
             src="assets/linkedin.png"
             class="icon contact-icon"
-            alt="LinkedIn icon"
-          />
+            alt="LinkedIn icon"></a>
+          
           <p><a href="https://www.linkedin.com/">LinkedIn</a></p>
         </div>
       </div>
@@ -245,7 +243,9 @@
       </nav>
       <p>Copyright &#169; 2025 First Lastname. All Rights Reserved</p>
     </footer>
-  <!-- </div> -->
+  <button id="back-to-top" onclick="scrollToTop()" aria-label="Back to top">
+  <img src="./assets/arrow.png" alt="" class="icon">
+</button>
  </body>
 
 

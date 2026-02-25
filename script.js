@@ -4,4 +4,29 @@ function toggleMenu(){
     const icon = document.querySelector(".hamburger-icon");
     menu.classList.toggle("open");
     icon.classList.toggle("open");
+    
+    //or keyboard and tab users
+    const isOpen = menu.classList.contains("open");
+    icon.setAttribute("aria-expanded", isOpen);
+    // prevents ghost tabbing
+    menu.setAttribute("aria-hidden", !isOpen);
+}
+
+window.addEventListener('scroll', function() {
+    // Check both body and documentElement for cross-browser support
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        backToTopBtn.classList.add("show");
+    } else {
+        backToTopBtn.classList.remove("show");
+    }
+});
+
+function scrollToTop() {
+    // FIX: Define the variable here!
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    window.scrollTo({
+        top: 0,
+        behavior: prefersReducedMotion ? 'auto' : 'smooth'
+    });
 }
