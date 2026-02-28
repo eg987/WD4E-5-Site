@@ -226,11 +226,16 @@ img {
   }
 section {
   padding-top: 4vh;
+  padding-bottom: 4vh;
   box-sizing: border-box;
-  min-height: fit-content;
-  margin: 0 5%;
-  height: fit-content;
-  /* makesure height gets over-rided in profile section mobile view */
+  /* centers content on all screens */
+  
+  width: 100%;
+  max-width: 1200px; 
+  margin: 0 auto;
+
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .section-container {
@@ -459,7 +464,7 @@ footer p{
 }
 
 
-/* Tablet Layout-same as max 1200 */
+/* Tablet Layout-(600px+) */
 @media screen and (min-width: 600px) {
 
   .section__pic-container{
