@@ -232,7 +232,7 @@ section {
   
   width: 100%;
   max-width: 1200px; 
-  margin: 0 auto;
+  /* margin: 0 auto;  may be redundant, keep inside media querey or can keep here if I want EVERYTHING centered */
 
   padding-left: 5%;
   padding-right: 5%;
@@ -246,7 +246,6 @@ section {
 .section__pic-container {
   display: flex;
   width: auto; 
-  height: 46vw;
   /* may change to 40vw */
   justify-content: center;
   margin: 0 auto 2rem
@@ -280,7 +279,8 @@ section {
 
 #profile {
   display: block;
-  height: 83vh;
+  min-height: 83vh;
+  height: auto; 
   margin-bottom: 3rem;  
 }
 
@@ -376,7 +376,6 @@ section {
 article{
   /* font-size: 1rem; not specified in orig except for minimal size*/
   display: flex;
-  width: 10rem;
   justify-content: space-around;
   gap: 0.5rem;
 }
@@ -406,8 +405,6 @@ cursor: default;
 
 .project-img{
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
 }
 
 .project-title{
@@ -476,7 +473,8 @@ footer p{
 
   /* PROFILE */
     #profile {
-      margin-bottom: 6rem;
+      padding-bottom: 5rem;
+      height: auto;
     }
   /*ABOUT */
   .title{
@@ -533,7 +531,7 @@ footer p{
 }
 
   
-/*------------------- Desktop Layout -same as max 1400 and default-----------------*/
+/*------------------- Desktop Layout -1200px+-----------------*/
   
 @media  screen and (min-width: 1200px){ 
   .section__pic-container {
@@ -563,23 +561,23 @@ footer p{
     
   
   section {
-    /* height: 96vh; */
-    /* this was causing overlap issues with experience and profile/about me sections, can set min height as needed. */
-    margin: 0 10rem;
-    padding-top: 4vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   #profile{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 5rem;
-    height: 83vh;
+    height: 83vh; /* sugg 80vh */
     margin-bottom: 6rem;
   }
 
   #profile .section-container {
-        display: flex;}
-        /* is this repetitive?? */
+      display: flex;
+      align-items: center;
+      gap: 4rem;}
         
   img{
    width: auto; 
@@ -617,8 +615,6 @@ footer p{
     
   #experience{
     padding-top: 8vh;
-    /* maybe revert to normal setting (by deleting this line) of 4vh set by section once final text for experience section figured out */
-    height: 96vh;
     margin-top: 0;
   }
 }
