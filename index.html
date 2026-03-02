@@ -13,8 +13,8 @@
   <!-- <div id="wrapper"> -->
   <nav id="hamburger-nav">
     <div class="logo">First Lastname</div>
-    <div class="hamburger-menu" >
-      <button class="hamburger-icon" onclick="toggleMenu()">
+    <button class="hamburger-menu" onclick="toggleMenu()" aria-label="Menu" >
+      <div class="hamburger-icon" >
         <!-- these are lines of hamburger menu -->
         <span></span>
         <span></span>
@@ -60,9 +60,9 @@
           </button>
       </div> 
       <div id="socials-container">
-        <img src="./assets/linkedin.png" alt="Linked In icon" class="icon" onclick="location.href='https://linkedin.com/'">
+        <img src="./assets/linkedin.png" alt="Linked In icon" class="icon" onclick="location.href='https://linkedin.com/'" tabindex="0" role="button">
         <img
-            src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/'">
+            src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/'" tabindex="0" role="button">
       </div> 
     </div> 
   </section>
@@ -213,6 +213,8 @@
             src="assets/linkedin.png"
             class="icon contact-icon"
             alt="LinkedIn icon"
+            role="button"
+            tabindex="0"
           />
           <p><a href="https://www.linkedin.com/">LinkedIn</a></p>
         </div>
