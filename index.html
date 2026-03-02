@@ -14,19 +14,19 @@
   <nav id="hamburger-nav">
     <div class="logo">First Lastname</div>
     <div class="hamburger-menu" >
-      <div class="hamburger-icon" onclick="toggleMenu()">
+      <button class="hamburger-icon" onclick="toggleMenu()">
         <!-- these are lines of hamburger menu -->
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
       <ul class="menu-links">
         <li><a href="#about" onclick="toggleMenu()">About</a></li>
         <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
         <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
         <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
       </ul>
-      </div>
+    </div>
   </nav>
   <nav id="desktop-nav">
     <div class="logo">First Lastname</div>
@@ -65,7 +65,6 @@
             src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/'">
       </div> 
     </div> 
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#about'"/>      
   </section>
   <section id="about">
       <p class="section__text__p1">Get To Know More</p>
@@ -100,9 +99,7 @@
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'"/>
-  </section>
+        </section>
   <section id="experience">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Experience</h1>
@@ -166,7 +163,6 @@
           </div>
         </div>
       </div>
-      <img src="assets/arrow.png" class="icon arrow" onclick="location.href='./#projects'" alt="Arrow icon">
   </section>
   <section id="projects">
     <p class="section__text__p1">Browse My Recent</p>
@@ -199,7 +195,6 @@
             </div>
           </div>
         </div>
-      <img src="assets/arrow.png" class="icon arrow" onclick="location.href='./#contact'" alt="Arrow icon"/>
     </section>
   <section id="contact">
     <p class="section__text__p1">Get In Touch</p>
