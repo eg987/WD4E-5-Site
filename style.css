@@ -11,6 +11,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Accessibility: Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #F9f9FF;
@@ -38,7 +49,17 @@ a:hover {
   color: #5e3ABB;
   text-decoration: underline;
   text-underline-offset: 1rem;
+  text-decoration-color: #5e3ABB;
 }
+
+a:focus-visible {
+  outline: 3px solid #5e3ABB;
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+
+
 
 /* ==========================================================================
    2. MOBILE NAVIGATION (Default)
@@ -79,6 +100,7 @@ a:hover {
   z-index: 2000;
 }
 
+/* double check */
 .hamburger-icon {
   display: flex;
   flex-direction: column;
@@ -93,6 +115,37 @@ a:hover {
   background-color: #F9f9FF;
   transition: all 0.3s ease-in-out;
 }
+/* focus ring for hamburger menu */
+
+
+/* consider march  alt styling */
+.hamburger-menu:focus-visible, 
+.menu-links a:focus-visible {
+  outline: 3px solid #5e3ABB;
+  outline-offset: 4px;
+}
+
+/* alt. */
+/* .hamburger-menu:focus-visible {
+  outline: 3px solid #5e3ABB;
+  outline-offset: 8px;
+  border-radius: 5%;
+}
+} */
+
+
+/* Hamburger to "X" Animation Logic */
+.hamburger-icon.open span:first-child {
+  transform: translate(0, 11px) rotate(45deg);
+}
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-icon.open span:last-child {
+  transform: translate(0, -11px) rotate(-45deg);
+}
+
+
 
 .menu-links {
   position: fixed;
@@ -103,14 +156,15 @@ a:hover {
   max-height: 0;
   overflow: hidden;
   visibility: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-ou, visibility 0s 0.3s;
   border: 1px solid #A9A6AD;
   z-index: 2500;
 }
 
 .menu-links.open {
   max-height: 300px;
-  visibility: visible;
+  visibility: visible; 
+  transition: all 0.3s ease-in-out, visibility 0s 0s;
 }
 
 .menu-links a {
@@ -118,8 +172,18 @@ a:hover {
   padding: 12px 25px;
   text-align: center;
   font-size: 1.5rem;
+  
+  text-decoration: none;
+
 }
 
+.menu-links a:focus-visible {
+  outline: 3px solid #5e3ABB; /* Your main purple */
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+  color: #5e3ABB; /* Also change text color for extra emphasis */
+  text-decoration: none; /* Optional: hide underline when focus ring is present */
+}
 /* ==========================================================================
    3. MOBILE LAYOUT (Default - Centered)
    ========================================================================== */
@@ -181,6 +245,7 @@ section {
 .text-container {
   text-align: center; /* Centered for mobile accessibility */
   line-height: 1.6;
+  padding: 1rem;
 }
 
 /* Buttons */
@@ -198,11 +263,38 @@ section {
   border-radius: 2rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  /* border: 0.1rem solid transparent; */
 }
 
 .btn-1 { border: #000 0.1rem solid; color: #F9f9FF; background: #121212; }
 .btn-2 { border: #000 0.1rem solid; color: #F9f9FF; background: #353535; }
 .btn-3 { background: #5e3ABB; color: #F9f9FF; border: #5e3ABB 0.1rem solid; }
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn-1:hover {
+  background-color: #F9f9FF;
+  color: #000000;
+}
+
+.btn-2:hover { 
+  background-color: #121212; 
+  color: #F9f9FF; 
+}
+
+.btn-3:hover {
+  background-color: #F9f9FF;
+  color: #5e3ABB;
+}
+
+.btn:focus-visible {
+  /* Pushes the ring slightly outside the rounded border */
+  outline: 3px solid #5e3ABB;
+  outline-offset: 4px; 
+  border-radius: 2rem; /* Matches the button's shape */
+}
 
 /* Icons */
 .icon {
@@ -230,6 +322,15 @@ article .expicon {
   gap: 1rem;
   margin-top: 1rem;
 }
+
+.icon:focus-visible, 
+.arrow:focus-visible {
+  outline: 3px solid #5e3ABB;
+  /* Icons are small, so we use a smaller offset to keep the ring tight */
+  outline-offset: 2px;
+  border-radius: 50%; /* Makes the focus ring a circle to match icon shape */
+}
+
 
 /* Cards (About / Experience / Projects) */
 .about-containers, .experience-details-container {
