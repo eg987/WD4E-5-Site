@@ -4,6 +4,8 @@
 
 
 ----------------------Attributions--------------------------
+
+
 Website.jpg https://pixabay.com/illustrations/web-design-user-interface-website-3411373/ ; free usage w/o credit, non commercial
 
 website-17785; by janjf93 https://pixabay.com/vectors/website-internet-internet-page-1778529/ ; free usage w/o credit, non commercial
