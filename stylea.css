@@ -1,0 +1,147 @@
+/* ==========================================================================
+   1. GENERAL & RESET
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- NEW: Accessibility for users with motion sensitivities --- */
+**@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}**
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #F9f9FF;
+  color: #121212;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  color: #121212;
+  text-decoration: none;
+  **transition: all 0.3s ease;** /* Restored from 1 */
+}
+
+a:hover {
+  color: #5e3ABB;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  **text-decoration-color: #5e3ABB;** /* Restored from 1 */
+}
+
+/* --- NEW: Accessibility Focus States --- */
+**a:focus-visible {
+  outline: 3px solid #5e3ABB;
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}**
+
+/* ==========================================================================
+   2. MOBILE NAVIGATION
+   ========================================================================== */
+.hamburger-menu {
+  /* ... base styles ... */
+  position: fixed;
+  top: 18px;
+  right: 5%;
+  z-index: 2000;
+}
+
+/* --- NEW: Focus ring for the hamburger button --- */
+**.hamburger-menu:focus-visible {
+  outline: 3px solid #5e3ABB;
+  outline-offset: 8px;
+}**
+
+/* --- NEW: Hamburger to "X" Animation Logic --- */
+**.hamburger-icon.open span:first-child {
+  transform: translate(0, 11px) rotate(45deg);
+}
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-icon.open span:last-child {
+  transform: translate(0, -11px) rotate(-45deg);
+}**
+
+.menu-links {
+  /* ... base styles ... */
+  **transition: all 0.3s ease-in-out, visibility 0s 0.3s;** /* Restored timing logic */
+}
+
+.menu-links.open {
+  max-height: 300px;
+  visibility: visible;
+  **transition: all 0.3s ease-in-out, visibility 0s 0s;** /* Immediate visibility on open */
+}
+
+/* ==========================================================================
+   3. BUTTONS & INTERACTION
+   ========================================================================== */
+.btn {
+  font-weight: 600;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  **transition: all 300ms ease;**
+  border: 0.1rem solid transparent;
+}
+
+/* --- NEW: Restored Hover States from Snippet 1 --- */
+**.btn-1:hover { 
+  background-color: #F9f9FF; 
+  color: #000; 
+}
+
+.btn-2:hover { 
+  background-color: #121212; 
+  color: #F9f9FF; 
+}
+
+.btn-3:hover { 
+  background-color: #F9f9FF; 
+  color: #5e3ABB; 
+  border-color: #5e3ABB; 
+}**
+
+/* --- NEW: Active State (Visual Click) --- */
+**.btn:active {
+  transform: scale(0.95);
+}**
+
+/* --- NEW: Icon Interaction --- */
+**.icon {
+  /* ... base styles ... */
+  transition: transform 0.2s ease;
+}
+.icon:hover {
+  transform: translateY(-2px);
+}**
+
+/* ==========================================================================
+   4. CARDS & GRID
+   ========================================================================== */
+.details-container {
+  /* ... base styles ... */
+  **transition: border-color 0.3s ease;**
+}
+
+/* --- NEW: Border highlight on card hover --- */
+**.details-container:hover {
+  border-color: #5e3ABB;
+}**
