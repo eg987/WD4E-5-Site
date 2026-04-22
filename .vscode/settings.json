@@ -1,3 +1,5 @@
 {
-    "liveServer.settings.multiRootWorkspaceName": "WD4E-5-Site"
+    "liveServer.settings.multiRootWorkspaceName": "WD4E-5-Site",
+    "editor.fontSize": 14,
+    "window.zoomLevel": 1
 }
